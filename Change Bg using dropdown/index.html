@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change background using dropdown</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="bg">Light Blue</div>
+      <select id="selectColor">
+        <option value="#ADD8E6" selected>Light Blue</option>
+        <option value="#6A5ACD">Slate Blue</option>
+        <option value="#FF69B4">Hot Pink</option>
+        <option value="#2E8B57">Sea Green</option>
+      </select>
+    </section>
+
+    <script>
+      const bg = document.querySelector('.bg')
+      const select = document.querySelector('select');
+      select.addEventListener("change", function(e) {
+        //   let color = e.target.value;
+          let color = e.target.options[e.target.selectedIndex].value;
+          let colorName = e.target.options[e.target.selectedIndex].text;
+          bg.innerHTML = colorName;
+          bg.style.background = color;
+      })
+    </script>
+  </body>
+</html>
