@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spinner</title>
+    <style>
+      body {
+        background: #161621;
+        min-height: 100vh;
+        overflow-y: hidden;
+        display: grid;
+        place-content: center;
+      }
+      .spinner {
+        border: 4px solid #161621;
+        border-left-color: slateblue;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 0.9s linear infinite;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="spinner"></div>
+  </body>
+</html>
